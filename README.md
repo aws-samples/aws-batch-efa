@@ -100,5 +100,5 @@ make submit
 
 ### Credit
 * Arya Hezarkhani, Software Development Engineer, AWS Batch
-* Jason Rupard, Senior Systems Development Engineer, AWS Batch
+* Jason Rupard, Principal Systems Development Engineer, AWS Batch
 * Sean Smith, Software Development Engineer II, AWS HPC
