@@ -1,0 +1,33 @@
+{
+  "jobDefinitionName": "EFA-MPI-JobDefinition",
+  "type": "multinode",
+  "nodeProperties": {
+    "numNodes": 8,
+    "mainNode": 0,
+    "nodeRangeProperties": [
+      {
+        "targetNodes": "0:",
+        "container": {
+	        "user": "efauser",
+          "image": "<IMAGE FROM PREVIOUS SECTION>",
+          "vcpus": 72,
+          "memory": 184320,
+          "linuxParameters": {
+            "devices": [
+              {
+                "hostPath": "/dev/infiniband/uverbs0"
+              }
+            ]
+          },
+          "ulimits": [
+            {
+              "hardLimit": -1,
+              "name": "memlock",
+              "softLimit": -1
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

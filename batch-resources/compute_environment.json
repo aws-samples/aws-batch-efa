@@ -1,0 +1,23 @@
+{
+  "computeEnvironmentName": "EFA-Batch-ComputeEnvironment",
+  "type": "MANAGED",
+  "state": "ENABLED",
+  "computeResources": {
+    "type": "EC2",
+    "minvCpus": 0,
+    "maxvCpus": 512,
+    "desiredvCpus": 0,
+    "instanceTypes": [
+      "c5n.18xlarge"
+    ],
+    "subnets": [
+      "<same-subnet-as-in-LaunchTemplate>"
+    ],
+    "instanceRole": "arn:aws:iam::<account-id>:instance-profile/ecsInstanceRole",
+    "launchTemplate": {
+      "launchTemplateName": "EFA-Batch-LaunchTemplate",
+      "version": "$Latest"
+    }
+  },
+  "serviceRole": "arn:aws:iam::<account-id>:role/AWSBatchServiceRole"
+}

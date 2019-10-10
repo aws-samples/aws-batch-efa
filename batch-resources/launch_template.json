@@ -1,0 +1,36 @@
+{
+  "LaunchTemplateName": "EFA-Batch-LaunchTemplate",
+  "LaunchTemplateData": {
+    "InstanceType": "c5n.18xlarge",
+    "IamInstanceProfile": {
+      "Arn": "arn:aws:iam::<Account Id>:instance-profile/ecsInstanceRole"
+    },
+    "NetworkInterfaces": [
+      {
+        "DeviceIndex": 0,
+        "Groups": [
+          "<Security Group>"
+        ],
+        "SubnetId": "<Subnet Id>",
+        "InterfaceType": "efa",
+        "Description": "NetworkInterfaces Configuration For EFA and Batch"
+      }
+    ],
+    "Placement": {
+      "GroupName": "efa"
+    },
+    "KeyName": "<KEY-PAIR-NAME>",
+    "TagSpecifications": [
+      {
+        "ResourceType": "instance",
+        "Tags": [
+          {
+            "Key": "from-lt",
+            "Value": "networkInterfacesConfig-EFA-Batch"
+          }
+        ]
+      }
+    ],
+    "UserData": "TUlNRS1WZXJzaW9uOiAxLjAKQ29udGVudC1UeXBlOiBtdWx0aXBhcnQvbWl4ZWQ7IGJvdW5kYXJ5PSI9PU1ZQk9VTkRBUlk9PSIKCi0tPT1NWUJPVU5EQVJZPT0KQ29udGVudC1UeXBlOiB0ZXh0L2Nsb3VkLWJvb3Rob29rOyBjaGFyc2V0PSJ1cy1hc2NpaSIKCmNsb3VkLWluaXQtcGVyIG9uY2UgeXVtX3dnZXQgeXVtIGluc3RhbGwgLXkgd2dldAoKY2xvdWQtaW5pdC1wZXIgb25jZSB3Z2V0X2VmYSB3Z2V0IC1xIC0tdGltZW91dD0yMCBodHRwczovL3MzLXVzLXdlc3QtMi5hbWF6b25hd3MuY29tL2F3cy1lZmEtaW5zdGFsbGVyL2F3cy1lZmEtaW5zdGFsbGVyLWxhdGVzdC50YXIuZ3ogLU8gL3RtcC9hd3MtZWZhLWluc3RhbGxlci1sYXRlc3QudGFyLmd6CgpjbG91ZC1pbml0LXBlciBvbmNlIHRhcl9lZmEgdGFyIC14ZiAvdG1wL2F3cy1lZmEtaW5zdGFsbGVyLWxhdGVzdC50YXIuZ3ogLUMgL3RtcAoKcHVzaGQgL3RtcC9hd3MtZWZhLWluc3RhbGxlcgpjbG91ZC1pbml0LXBlciBvbmNlIGluc3RhbGxfZWZhIC4vZWZhX2luc3RhbGxlci5zaCAteQpwb3AgL3RtcC9hd3MtZWZhLWluc3RhbGxlcgoKY2xvdWQtaW5pdC1wZXIgb25jZSBlZmFfaW5mbyAvb3B0L2FtYXpvbi9lZmEvYmluL2ZpX2luZm8gLXAgZWZhCgotLT09TVlCT1VOREFSWT09LS0K"
+  }
+}

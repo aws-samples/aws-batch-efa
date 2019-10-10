@@ -1,0 +1,11 @@
+{
+  "jobQueueName": "EFA-Batch-JobQueue",
+  "state": "ENABLED",
+  "priority": 10,
+  "computeEnvironmentOrder": [
+    {
+      "order": 1,
+      "computeEnvironment": "EFA-Batch-ComputeEnvironment"
+    }
+  ]
+}
