@@ -1,11 +1,6 @@
-## My Project
+## Sample code to setup NAS Parallel Benchmark using EFA and AWS Batch
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+This is the sample code for the AWS Batch Blog: Run High Performance Computing Workloads using AWS Batch MultiNode Jobs with Elastic Fabric Adapter
 
 ## License
 
