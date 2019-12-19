@@ -9,7 +9,7 @@
         "targetNodes": "0:",
         "container": {
 	        "user": "efauser",
-          "image": "<IMAGE FROM PREVIOUS SECTION>",
+          "image": "<ACCOUNT ID>.dkr.ecr.<REGION>.amazonaws.com/aws-batch-efa",
           "vcpus": 72,
           "memory": 184320,
           "linuxParameters": {
