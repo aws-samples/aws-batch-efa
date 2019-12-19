@@ -15,7 +15,7 @@ AWS_REGION=?
 ACCOUNT_ID=?
 
 all:
-  docker build . -t npb
+	docker build . -t npb
 
 login:
 	`aws ecr get-login --no-include-email --region ${AWS_REGION}`
