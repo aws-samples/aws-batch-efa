@@ -11,7 +11,7 @@ This library is licensed under the MIT-0 License. See the LICENSE file.
 To get started, clone this repo locally:
 
 ```bash
-git clone https://github.com/sean-smith/aws-batch-efa-blogpost.git
+git clone https://github.com/aws-samples/aws-batch-efa.git
 cd aws-batch-efa-blogpost/
 ```
 
@@ -79,7 +79,11 @@ make push     # logs in, tags, and pushes to ECR
 
 ### Job Definition
 
-Now we need a job definition, this defines which docker image to use for the job:
+```bash
+cd batch-resources/
+```
+
+Now we need a job definition, this defines which docker image to use for the job, edit the `job_definition.json` file and substitute `<ACCOUNT ID>` and `<REGION>`. Then create the job definition:
 
 ```
 aws batch register-job-definition --cli-input-json file://job_definition.json
@@ -91,6 +95,12 @@ aws batch register-job-definition --cli-input-json file://job_definition.json
 ```
 
 ### Submit a job
+
+Go back to the main directory:
+
+```bash
+cd ..
+```
 
 Finally we can submit a job!
 
